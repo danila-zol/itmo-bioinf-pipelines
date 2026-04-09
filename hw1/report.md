@@ -1,4 +1,4 @@
-The pipeline was run on test data with conda and docker profiles.
+The pipeline was run on the default test data with conda and docker profiles.
 
 ERR11502241 sequncing run was chosen for testing on real data. It contains RNA-seq data from Saccharomyces cerevisiae (brewer's yeast) model organism. Enterez transcriptome was used as the reference.
 To generate analysis results the pipline was run with the follwing arguments:
