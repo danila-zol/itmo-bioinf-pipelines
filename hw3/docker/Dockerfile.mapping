@@ -1,0 +1,16 @@
+# Dockerfile for mapping processes (BWA, SAMtools)
+FROM mambaorg/micromamba:1.5.8
+
+LABEL maintainer="student@itmo.ru"
+LABEL description="Docker image for read mapping (BWA + SAMtools)"
+
+USER root
+
+ENV MAMBA_ROOT_PREFIX=/opt/conda
+
+RUN micromamba install -y -p /opt/conda -c bioconda -c conda-forge \
+    bwa=0.7.17 \
+    samtools=1.17 && \
+    micromamba clean -a -y
+
+ENV PATH="/opt/conda/bin:${PATH}"

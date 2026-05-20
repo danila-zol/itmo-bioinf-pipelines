@@ -1,0 +1,17 @@
+# Dockerfile for assembly processes (SPAdes)
+FROM mambaorg/micromamba:1.5.8
+
+LABEL maintainer="student@itmo.ru"
+LABEL description="Docker image for de novo assembly with SPAdes"
+
+USER root
+
+ENV MAMBA_ROOT_PREFIX=/opt/conda
+
+RUN micromamba install -y -p /opt/conda -c bioconda -c conda-forge \
+    python=3.11 \
+    setuptools \
+    spades && \
+    micromamba clean -a -y
+
+ENV PATH="/opt/conda/bin:${PATH}"
