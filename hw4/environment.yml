@@ -1,0 +1,14 @@
+name: bioinf-pipeline
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - fastqc
+  - trimmomatic
+  - spades
+  - bwa
+  - samtools
+  - bcftools
+  - matplotlib
+  - python>=3.10
