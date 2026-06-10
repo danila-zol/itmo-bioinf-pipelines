@@ -1,0 +1,15 @@
+# Dockerfile for variant calling processes (BCFtools)
+FROM mambaorg/micromamba:1.5.8
+
+LABEL maintainer="student@itmo.ru"
+LABEL description="Docker image for variant calling with BCFTools"
+
+USER root
+
+ENV MAMBA_ROOT_PREFIX=/opt/conda
+
+RUN micromamba install -y -p /opt/conda -c bioconda -c conda-forge \
+    bcftools=1.18 && \
+    micromamba clean -a -y
+
+ENV PATH="/opt/conda/bin:${PATH}"

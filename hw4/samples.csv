@@ -1,0 +1,3 @@
+id,group,fastq_1,fastq_2
+SRR37880700,fluA,./SRR37880700_1.fastq.gz,./SRR37880700_2.fastq.gz
+SRR36813205,fluB,./SRR36813205_1.fastq.gz,./SRR36813205_2.fastq.gz
